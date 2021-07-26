@@ -4,3 +4,4 @@ flask-socketio
 eventlet
 pymongo
 flask-login
+gunicorn==19.9.0
