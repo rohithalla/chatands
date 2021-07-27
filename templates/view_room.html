@@ -53,7 +53,8 @@ function getIP2(json) {
     //var server = http.createServer();
     //server.listen(port, ipAddress);
     //var socket = io.listen(server)
-    const socket = io.connect("http://" + window.val + ":3000");
+    //const socket = io.connect("http://" + window.val + ":3000");
+        const socket = io.connect();
     socket.on('connect', function () {
         socket.emit('join_room', {
             username: "{{ username }}",
