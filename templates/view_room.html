@@ -46,9 +46,14 @@ function getIP2(json) {
 <script>
     //const socket = io.connect("0.0.0.0/0");
     //document.write("My public IP address is: " + window.val);
-document.write(window.location.host);
-    //const socket = io.connect("http://" + window.val + ":80");
-const socket = io.connect("http://" + window.location.host);
+    document.write(window.location.host);
+    //const socket = io.connect("http://" + window.val + ":3000");
+    //const socket = io.connect("http://" + window.location.host);
+    //var io = require('socket.io');
+    //var server = http.createServer();
+    //server.listen(port, ipAddress);
+    //var socket = io.listen(server)
+    const socket = io.connect("http://" + window.val + ":3000");
     socket.on('connect', function () {
         socket.emit('join_room', {
             username: "{{ username }}",
