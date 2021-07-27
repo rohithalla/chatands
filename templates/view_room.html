@@ -54,8 +54,8 @@ function getIP2(json) {
     //server.listen(port, ipAddress);
     //var socket = io.listen(server)
     //const socket = io.connect("http://" + window.val + ":3000");
-        const socket = io.connect();
-    socket.on('connect', function () {
+      const socket = io.connect();
+    socket.on('connect', function ("https://chatandshit.herokuapp.com") {
         socket.emit('join_room', {
             username: "{{ username }}",
             room: "{{ room._id }}"
